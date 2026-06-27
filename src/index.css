@@ -22,6 +22,7 @@
   /* Layout */
   --container-width: 1120px;
   --container-padding: 1rem;
+  --navbar-height: 4rem;
 
   /* Effets */
   --radius-sm: 0.5rem;
@@ -152,6 +153,7 @@ select {
 
 button {
   cursor: pointer;
+  border: none;
 }
 
 img,
