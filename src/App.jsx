@@ -1,9 +1,10 @@
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
-    <main>
-      <h1>Gaultier Souris</h1>
-      <p>Développeur web freelance en Gironde.</p>
-    </main>
+    <div className="app">
+      <Navbar />
+    </div>
   );
 }
 
