@@ -13,7 +13,8 @@
   --color-dark: #111111;
   --color-dark-surface: #1c1c1c;
 
-  --color-border: #e6e6e6;
+  --color-border-dark: #111111;
+  --color-border-light: #e6e6e6;
 
   /* Typographie */
   --font-heading: "Space Grotesk", sans-serif;
@@ -31,9 +32,7 @@
 
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
 
-  /* ==========================
-   SPACING
-========================== */
+  /* Spacing*/
 
   --spacing-xs: 0.25rem; /* 4px */
   --spacing-sm: 0.5rem; /* 8px */
@@ -43,17 +42,13 @@
   --spacing-2xl: 3rem; /* 48px */
   --spacing-3xl: 4rem; /* 64px */
 
-  /* ==========================
-   TRANSITIONS
-========================== */
+  /* Transition */
 
   --transition-fast: 150ms ease;
-  --transition-normal: 250ms ease;
+  --transition-normal: 300ms ease;
   --transition-slow: 400ms ease;
 
-  /* ==========================
-   Z-INDEX
-========================== */
+  /* Z-index*/
 
   --z-dropdown: 100;
   --z-sticky: 200;
@@ -136,7 +131,6 @@ p,
 li {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--color-text-muted);
 }
 
 a {
@@ -154,6 +148,7 @@ select {
 button {
   cursor: pointer;
   border: none;
+  background: none;
 }
 
 img,
