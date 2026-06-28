@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { IoMdClose } from "react-icons/io";
 import logo from "../../assets/logo.png";
 import "./Navbar.css";
 
@@ -68,11 +66,17 @@ function Navbar() {
         </nav>
         <button
           type="button"
-          className="navbar__toggle"
+          className={
+            isMenuOpen
+              ? "navbar__toggle navbar__toggle--open"
+              : "navbar__toggle"
+          }
           aria-label="ouvrir le menu de navigation"
           onClick={toggleMenu}
         >
-          {isMenuOpen ? <IoMdClose /> : <RxHamburgerMenu />}
+          <span className="navbar__line"></span>
+          <span className="navbar__line"></span>
+          <span className="navbar__line"></span>
         </button>
       </div>
     </header>

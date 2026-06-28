@@ -1,3 +1,13 @@
+.navbar {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  border: 1px var(--color-primary) solid;
+  border-radius: 999px;
+  background-color: var(--color-background);
+}
+
 .navbar__container {
   min-height: var(--navbar-height);
   display: flex;
@@ -29,28 +39,53 @@
 }
 
 .navbar__toggle {
-  background: none;
-  cursor: pointer;
-  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  z-index: 2;
+}
+
+.navbar__line {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: var(--color-dark);
+  transition:
+    transform 300ms ease,
+    scale 300ms ease;
+}
+
+.navbar__toggle--open .navbar__line:nth-child(1) {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+
+.navbar__toggle--open .navbar__line:nth-child(2) {
+  scale: 0;
+}
+
+.navbar__toggle--open .navbar__line:nth-child(3) {
+  transform: translateY(-0.6rem) rotate(-45deg);
 }
 
 .navbar__menu {
   position: fixed;
   top: var(--navbar-height);
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   background-color: var(--color-background);
+  border-top: 1px var(--color-primary) solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(100%);
-  transition: transform 300ms ease-in-out;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
 }
 
 .navbar__menu--open {
-  transform: translateX(0);
+  opacity: 100%;
 }
 
 .navbar__menu ul {
@@ -77,9 +112,6 @@
 
 /* vue tablette & Desktop*/
 @media (min-width: 768px) {
-  .navbar {
-    border-bottom: 1px var(--color-primary) solid;
-  }
   .navbar__container {
     padding: 1rem 2.5rem;
   }
@@ -87,6 +119,7 @@
   .navbar__menu {
     position: static;
     transform: translateX(0);
+    border-top: none;
   }
 
   .navbar__logo {
