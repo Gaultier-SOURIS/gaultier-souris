@@ -15,7 +15,7 @@
 
 .navbar__logo {
   width: 3rem;
-  height: 3rem;
+  height: auto;
 }
 
 .navbar__identity {
@@ -65,4 +65,8 @@
   list-style-type: none;
   display: flex;
   font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  /* CSS desktop ici */
 }
