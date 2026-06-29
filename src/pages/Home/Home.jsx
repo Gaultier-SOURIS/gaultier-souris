@@ -1,11 +1,13 @@
 import "./Home.css";
 import Hero from "../../components/Hero/Hero";
+import Promise from "../../components/Promise/Promise";
 
 function Home() {
   return (
-    <div>
+    <main>
       <Hero />
-    </div>
+      <Promise />
+    </main>
   );
 }
 

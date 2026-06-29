@@ -8,10 +8,15 @@
   --color-text-muted: #5f6368;
 
   --color-background: #fafafa;
+  --color-background-beige: #fff5e8;
   --color-surface: #ffffff;
 
   --color-dark: #111111;
   --color-dark-surface: #1c1c1c;
+  --color-light-surface: #fff3d8;
+
+  --color-soft-surface: #fffdf8;
+  --color-soft-surface-2: #fffaf0;
 
   --color-border-dark: #111111;
   --color-border-light: #e6e6e6;
